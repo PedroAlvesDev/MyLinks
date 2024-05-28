@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
 
+:root {
+    --background-color: #CCCCCC;
+    --primary-color: #000;
+    --secondary-color: #5f5c5a;
+    --accent-color: #a45a49;
+    --highlight-color: #241A1C;
+    --white-color: #FFFFFF;
+    --box-shadow-color: #5f5c5a;
+    --border-color: #5f5c5a;
+    --icon-color: #000;
+
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-epilogue: 'Epilogue', sans-serif;
+    --font-family-montserrat: 'Montserrat', sans-serif;
+}
+
 
 *{
     margin: 0;
@@ -8,8 +24,8 @@
 }
 
 body {
-    background-color: #CCCCCC;
-    color: #000;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     display: flex;
     text-align: center; 
     justify-content: center;
@@ -17,7 +33,7 @@ body {
 }
 
 html {
-    font-family: "inter", sans-serif;
+    font-family: var(--font-family-inter);
 }
 
 a {
@@ -36,12 +52,20 @@ header img {
     width: 9rem;
     height: 9rem;
     border-radius: 50%;
-    border: 1px solid #5f5c5a;
+    border: 1px solid var(--border-color);
     justify-content: center;
 }
 
+#mode_icon {
+    position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+}
+
 header h1 {
-    font-family: Epilogue;
+    font-family: var(--font-family-epilogue);
     font-size: 2rem;
     margin-top: 1rem;
     text-align: center;
@@ -53,14 +77,14 @@ header h2 {
     padding: 0;
     margin-top: 0.5rem;
 
-    color: #5f5c5a;
+    color: var(--secondary-color);
 
     display: grid;
     text-align: center;
     justify-content: center;
     font-size: 1rem;
     font-weight: 500;
-    font-family: Montserrat;
+    font-family: var(--font-family-montserrat);
 }
 
 nav ul {
@@ -74,21 +98,25 @@ nav ul {
     align-items: center;
 }
 
-nav img{
+nav i{
     border: none;
+    color: var(--icon-color);
 }
 
-.links img {
+.links i {
     width: 1.5rem;
     height: 1.5rem;
+}
 
+.links i:hover {
+    transform: scale(1.2);
 }
 
 .myLinks h3 {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.25rem;
-    font-family: Epilogue;
+    font-family: var(--font-family-epilogue);
 
     margin-bottom: 1rem;
 }
@@ -98,18 +126,36 @@ nav img{
     margin-bottom: 1rem;
     min-height: 4rem;
     border-radius: 0.25rem;
-    box-shadow: 5px 6px 5px #5f5c5a;
+    box-shadow: 5px 6px 5px var(--box-shadow-color);
 
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
 }
 
 .myLinks p {
     padding: 1.5rem;
-    color: #000000;
+    color: var(--primary-color);
     font-weight: 500;
 }
 
-li p:hover {
-    background-color: #241A1C;
-    color: #a45a49;
+.myLinks li:hover {
+    background-color: var(--highlight-color);
+
+    transform: scale(1.02);
+}
+
+.myLinks p:hover {
+    color: var(--accent-color);
+    transform: scale(1.08);
+}
+
+.dark#root {
+    --background-color: #181012;
+    --primary-color: #a45a49;
+    --secondary-color: #C7BAB3;
+    --accent-color: #C7BAB3;
+    --highlight-color: #1f1517;
+    --white-color: #241a1c;
+    --box-shadow-color: #5f5c5a;
+    --border-color: #241a1c;
+    --icon-color: #ffffff;
 }
