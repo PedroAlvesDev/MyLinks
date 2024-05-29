@@ -148,6 +148,17 @@ nav i{
     transform: scale(1.08);
 }
 
+.footer-autor {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-family-inter);
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
 .dark#root {
     --background-color: #181012;
     --primary-color: #a45a49;
@@ -157,5 +168,5 @@ nav i{
     --white-color: #241a1c;
     --box-shadow-color: #5f5c5a;
     --border-color: #241a1c;
-    --icon-color: #ffffff;
+    --icon-color: #ca6702;
 }
